@@ -1,4 +1,4 @@
-# joke_utils.py
+
 from functools import wraps
 from typing import List, Dict, Tuple
 
@@ -8,8 +8,6 @@ def fetching_decorator(func):
         print("\nFetching a Random Joke…\n")
         return func(*args, **kwargs)
     return wrapper
-
-# Robust formatter: convert to str, collapse whitespace
 format_joke = lambda j: " ".join(str(j).strip().split()) if j is not None else ""
 
 def is_valid_joke(joke_text: str) -> bool:

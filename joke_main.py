@@ -1,4 +1,4 @@
-# joke_main.py
+
 from joke_class import JokeManager
 from joke_utils import fetching_decorator, format_joke, is_valid_joke, count_jokes_from_log, top_n_from_counts
 import sys
