@@ -2,13 +2,16 @@
 from pathlib import Path
 from datetime import datetime
 import random
-from typing import List, Tuple
+from typing import List, Tuple, Optional
 
 class JokeManager:
 
-    def __init__(self, jokes_file: str = "jokes.txt", log_file: str = "joke_log.txt"):
-        self.jokes_file = Path(jokes_file)
-        self.log_file = Path(log_file)
+    def __init__(self, jokes_file: Optional[str] = None, log_file: Optional[str] = None):
+        # Resolve files relative to this module so the app works
+        # regardless of the current working directory.
+        base_dir = Path(__file__).resolve().parent
+        self.jokes_file = Path(jokes_file) if jokes_file else base_dir / "jokes.txt"
+        self.log_file = Path(log_file) if log_file else base_dir / "joke_log.txt"
         self.jokes: List[str] = self._load_jokes()
 
     def _load_jokes(self) -> List[str]:

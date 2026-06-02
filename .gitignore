@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+
+backend/users.db
+backend/*.db
+
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+joke_log.txt
