@@ -11,7 +11,9 @@
 .card {
   width: min(720px, 100%);
   border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-radius: 16px;
   box-shadow: var(--shadow);
   padding: 20px;
@@ -20,7 +22,7 @@
 
 @media (prefers-color-scheme: dark) {
   .card {
-    background: rgba(0, 0, 0, 0.18);
+    background: rgba(0, 0, 0, 0.45);
   }
 }
 
