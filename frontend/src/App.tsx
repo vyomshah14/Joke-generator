@@ -1,6 +1,6 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import DashboardPage from './pages/DashboardPage'
-import './app.css'
+import './App.css'
 
 const queryClient = new QueryClient()
 
